@@ -1,0 +1,6 @@
+{
+  "name": "PrepEngine",
+  "description": "Student-powered syllabus weightage and exam topic compiler translating lecture hints into exam clarity with crowdsourced peer validation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

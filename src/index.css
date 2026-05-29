@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,650;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Primary Color (60%): Earthy / Olive Green (Calms & reduces eye fatigue) */
+  --color-olive-50: #f4f6f4;
+  --color-olive-100: #e5ebe5;
+  --color-olive-200: #cbd7cc;
+  --color-olive-350: #88a38b;
+  --color-olive-400: #718d75;
+  --color-olive-600: #4a5c4d;
+  --color-olive-700: #3b4b3e;
+  --color-olive-800: #2d382e;
+  --color-olive-900: #1a221b;
+  --color-olive-950: #0f1410;
+
+  /* Secondary Color (30%): Sand / Beige Tones (Soft organic contrast) */
+  --color-sand-50: #fbfaf8;  /* warm off-white canvas */
+  --color-sand-100: #f5f2eb; /* soft warm beige background */
+  --color-sand-200: #ebe5dc; /* warm grey-beige border */
+  --color-sand-300: #dfd7cc; /* active contrast sand */
+  --color-sand-400: #cbbfae;
+  --color-sand-700: #7c6e5a; /* organic deep beige text */
+
+  /* Accent Color (10%): Warm Amber / Terracotta (Actions, highlight indicators) */
+  --color-accent-terracotta: #d95d39; /* rust / orange-red */
+  --color-accent-amber: #e69d45; /* warm gold / amber */
+  --color-accent-gold-soft: #fcf8f2; /* extremely soft gold bg */
+  --color-accent-terracotta-soft: #fbf5f2; /* soft terracotta bg */
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(250, 248, 245, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(223, 215, 204, 0.5);
+  }
+  .glass-dark {
+    background: rgba(26, 34, 27, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: var(--color-sand-50);
+  color: var(--color-olive-950);
+}
+
+/* Custom scrollbar for premium organic aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sand-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-olive-200);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-olive-350);
+}
